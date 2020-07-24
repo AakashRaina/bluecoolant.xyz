@@ -9,3 +9,7 @@ body{
 svg{
   display: inline;
 }
+
+.bio p{
+ display: inline;
+}

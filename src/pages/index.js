@@ -1,22 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import '../css/index.css';
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi';
 
 const IndexPage = () => (
-  <Layout>
+  <div className='container mx-auto'>
     <SEO title="Home" />
-    <h1 className='bg-green-400'>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className='h-35 pl-5 pt-5 border-b-2 border-gray-400'>
+      <div className='text-4xl font-bold'>
+        Aakash Raina
+      </div>
+      <div className='pt-8 space-x-4'>
+        <span><FaTwitter color='#5f6c80' /></span>
+        <span><FaLinkedin color='#5f6c80' /></span>
+        <span><FiMail color='#5f6c80' /></span>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+
+  </div>
 )
 
 export default IndexPage

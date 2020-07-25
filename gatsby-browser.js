@@ -1,1 +1,1 @@
-import "./src/css/Tailwind.css" // Globally applied css
+import './src/css/Tailwind.css'; // Globally applied css

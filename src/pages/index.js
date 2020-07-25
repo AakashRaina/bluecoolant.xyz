@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout';
 import '../css/index.styl';
+import usePosts from '../hooks/usePosts';
 
 const IndexPage = () => {
+  const posts = usePosts();
+
   return (
     <Layout>
       <div className="bio">
@@ -26,6 +29,11 @@ const IndexPage = () => {
           <p className="highlight-text">Frontend</p> development in general.❤️
           anything Web.
         </div>
+      </div>
+      <div>
+        {posts.map((post, idx) => {
+          return <pre>{JSON.stringify(post.frontmatter, null, 3)}</pre>;
+        })}
       </div>
     </Layout>
   );

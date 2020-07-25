@@ -43,7 +43,7 @@ const IndexPage = () => {
           <p className="text-blue-500">Javascript</p>,{' '}
           <p className="text-blue-500">React</p>,{' '}
           <p className="text-blue-500">Web performance</p> 🚀 and{' '}
-          <p className="text-blue-500">Frontend</p> development in general.
+          <p className="text-blue-500">Frontend</p> development in general.❤️ anything Web.
         </div>
       </div>
     </div>

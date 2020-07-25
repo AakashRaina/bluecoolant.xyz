@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/index.css';
+import '../css/layout.styl';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import Helmet from 'react-helmet';
@@ -10,17 +10,17 @@ const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <div className="container mx-auto">
+    <div className='layout-container'>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="desc" content={description} />
       </Helmet>
-      <div className="h-35 pl-5 pt-5 border-b-2 border-gray-300">
-        <div className="text-blue-500 text-5xl font-bold subpixel-antialiased">
+      <div className='header'>
+        <div>
           <Link to='/'>Aakash</Link>
         </div>
-        <div className="pt-5 pb-3 space-x-4">
+        <div className='social-links'>
           <span>
             <a href='https://twitter.com/Bluecoolant' target='_blank' rel="noreferrer"><FaTwitter color="#5f6c80" /></a>
           </span>

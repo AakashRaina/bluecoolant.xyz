@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout';
+import '../css/index.styl';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <div className="h-64 pl-5 pr-5 pt-20 align-middle subpixel-antialiased">
+      <div className='bio'>
         <div className="text-4xl text-blue-500 text-5xl">Hi.</div>
         <div className="text-gray-600 bio text-2xl">
           I'm Aakash Raina - currently working as UI Engineer @{' '}

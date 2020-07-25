@@ -15,6 +15,14 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js')
+        }
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

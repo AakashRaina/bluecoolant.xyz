@@ -5,16 +5,25 @@ import '../css/index.styl';
 const IndexPage = () => {
   return (
     <Layout>
-      <div className='bio'>
-        <div className="text-4xl text-blue-500 text-5xl">Hi.</div>
-        <div className="text-gray-600 bio text-2xl">
+      <div className="bio">
+        <div className="highlight-text">Hi.</div>
+        <div className="about">
           I'm Aakash Raina - currently working as UI Engineer @{' '}
-          <p className="text-blue-500"><a href='https://razorpay.com/' target='_blank' rel="noreferrer">Razorpay[YC-2015]</a></p>, on the core
-          payments team. I write mostly about{' '}
-          <p className="text-blue-500">Javascript</p>,{' '}
-          <p className="text-blue-500">React</p>,{' '}
-          <p className="text-blue-500">Web performance</p> 🚀 and{' '}
-          <p className="text-blue-500">Frontend</p> development in general.❤️
+          <p>
+            <a
+              href="https://razorpay.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="highlight-text"
+            >
+              Razorpay[YC-2015]
+            </a>
+          </p>
+          , on the core payments team. I write mostly about{' '}
+          <p className="highlight-text">Javascript</p>,{' '}
+          <p className="highlight-text">React</p>,{' '}
+          <p className="highlight-text">Web performance</p> 🚀 and{' '}
+          <p className="highlight-text">Frontend</p> development in general.❤️
           anything Web.
         </div>
       </div>

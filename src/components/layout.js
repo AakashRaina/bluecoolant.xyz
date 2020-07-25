@@ -4,6 +4,7 @@ import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import Helmet from 'react-helmet';
 import useSiteMetadata from '../hooks/useSiteMetadata';
+import { Link } from 'gatsby';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -17,20 +18,20 @@ const Layout = ({ children }) => {
       </Helmet>
       <div className="h-35 pl-5 pt-5 border-b-2 border-gray-300">
         <div className="text-blue-500 text-5xl font-bold subpixel-antialiased">
-          Aakash
+          <Link to='/'>Aakash</Link>
         </div>
         <div className="pt-5 pb-3 space-x-4">
           <span>
-            <FaTwitter color="#5f6c80" />
+            <a href='https://twitter.com/Bluecoolant' target='_blank' rel="noreferrer"><FaTwitter color="#5f6c80" /></a>
           </span>
           <span>
-            <FaLinkedin color="#5f6c80" />
+            <a href='https://www.linkedin.com/in/aakashraina/' target='_blank' rel="noreferrer"><FaLinkedin color="#5f6c80" /></a>
           </span>
           <span>
-            <FaGithub color="#5f6c80" />
+            <a href='https://github.com/AakashRaina' target='_blank' rel="noreferrer"><FaGithub color="#5f6c80" /></a>
           </span>
           <span>
-            <FiMail color="#5f6c80" />
+            <a href="mailto:aakashraina9@gmail.com"><FiMail color="#5f6c80" /></a>
           </span>
         </div>
       </div>

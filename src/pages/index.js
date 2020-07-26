@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import '../css/index.styl';
 import usePosts from '../hooks/usePosts';
+import PostOverview from '../components/postoverview';
 
 const IndexPage = () => {
   const posts = usePosts();
@@ -30,9 +31,9 @@ const IndexPage = () => {
           anything Web.
         </div>
       </div>
-      <div>
+      <div className="posts-list">
         {posts.map((post, idx) => {
-          return <pre>{JSON.stringify(post.frontmatter, null, 3)}</pre>;
+          return <PostOverview post={post} key={idx} />;
         })}
       </div>
     </Layout>

@@ -1,8 +1,8 @@
+@import './theme.styl';
+
 body
   font-family 'Noto Serif', serif
-
-.highlight-text
-  color#2ca2e9
+  background-color $primary-background
 
 .layout-container
   width 70%
@@ -18,7 +18,7 @@ body
   border-bottom 2px #e1e1e1 solid
 
   div:first-child
-    font-size 2.25rem
+    font-size $primary-font
     font-weight bold
 
   .social-links
@@ -27,6 +27,9 @@ body
 
     span
      padding-right 13px
+
+.highlight-text
+  color $primary-color
 
 @media (max-width : 500px)
   .layout-container 

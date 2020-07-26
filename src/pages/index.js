@@ -31,6 +31,7 @@ const IndexPage = () => {
           anything Web.
         </div>
       </div>
+      <div className="post-list-header">Posts</div>
       <div className="posts-list">
         {posts.map((post, idx) => {
           return <PostOverview post={post} key={idx} />;

@@ -18,7 +18,7 @@ export const imageQuery = graphql`
 const PageNotFound = ({ data }) => {
   return (
     <Layout>
-      <Img alt='' fluid={data.file.childImageSharp.fluid} />
+      <Img alt="" fluid={data.file.childImageSharp.fluid} />
     </Layout>
   );
 };

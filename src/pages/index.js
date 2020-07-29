@@ -1,14 +1,18 @@
 import React from 'react';
 import Layout from '../components/layout';
-import '../css/index.styl';
+import Seo from '../components/seo';
 import usePosts from '../hooks/usePosts';
+import useSiteMetadata from '../hooks/useSiteMetadata';
 import PostOverview from '../components/postoverview';
+import '../css/index.styl';
 
 const IndexPage = () => {
   const posts = usePosts();
+  const { title, description } = useSiteMetadata();
 
   return (
     <Layout>
+      <Seo title={title} description={description} />
       <div className="bio">
         <div className="highlight-text">Hi.</div>
         <div className="about">

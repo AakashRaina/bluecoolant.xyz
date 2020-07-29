@@ -1,21 +1,15 @@
 import React from 'react';
-import '../css/layout.styl';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
-import Helmet from 'react-helmet';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import { Link } from 'gatsby';
+import '../css/layout.styl';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
     <div className="layout-container">
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="desc" content={description} />
-      </Helmet>
       <div className="header">
         <div>
           <Link to="/" className="highlight-text">

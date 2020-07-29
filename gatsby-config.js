@@ -3,6 +3,10 @@ module.exports = {
     title: `Home | Bluecoolant`,
     description: `Aakash raina's blog`,
     author: `@AakashRaina`,
+    twitter: `https://twitter.com/Bluecoolant`,
+    github: `https://github.com/AakashRaina`,
+    linkedIn: `https://www.linkedin.com/in/aakashraina/`,
+    mailto: `mailto:aakashraina9@gmail.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

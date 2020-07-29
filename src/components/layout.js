@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 import '../css/layout.styl';
 
 const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { github, twitter, linkedIn, mailto } = useSiteMetadata();
 
   return (
     <div className="layout-container">
@@ -18,34 +18,22 @@ const Layout = ({ children }) => {
         </div>
         <div className="social-links">
           <span>
-            <a
-              href="https://twitter.com/Bluecoolant"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={twitter} target="_blank" rel="noreferrer">
               <FaTwitter color="#5f6c80" />
             </a>
           </span>
           <span>
-            <a
-              href="https://www.linkedin.com/in/aakashraina/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={linkedIn} target="_blank" rel="noreferrer">
               <FaLinkedin color="#5f6c80" />
             </a>
           </span>
           <span>
-            <a
-              href="https://github.com/AakashRaina"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={github} target="_blank" rel="noreferrer">
               <FaGithub color="#5f6c80" />
             </a>
           </span>
           <span>
-            <a href="mailto:aakashraina9@gmail.com">
+            <a href={mailto}>
               <FiMail color="#5f6c80" />
             </a>
           </span>

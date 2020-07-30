@@ -5,6 +5,18 @@
       "projectUrl": "https://react-sling.netlify.app/",
       "projectDescription": "Custom boilerplate for quickly bootstrapping react apps 🚀. An alternative to create-react-app.",
       "date": "July, 2020"
+    },
+    {
+      "projectName": "Loffy",
+      "projectUrl": "https://github.com/AakashRaina/Loffy",
+      "projectDescription": "A movie finder 🍿 app built using React Native. Uses the movie db API.",
+      "date": "February, 2018"
+    },
+    {
+      "projectName": "Sales Predictor",
+      "projectUrl": "https://github.com/AakashRaina/SalesPredictor",
+      "projectDescription": "A sales predictor 📈 machine learning model.",
+      "date": "December, 2016"
     }
   ]
 }

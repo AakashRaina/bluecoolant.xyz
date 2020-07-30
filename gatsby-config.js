@@ -14,12 +14,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `${__dirname}/src/utils/typography`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

@@ -14,6 +14,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

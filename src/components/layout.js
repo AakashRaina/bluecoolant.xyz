@@ -4,9 +4,11 @@ import { FiMail } from 'react-icons/fi';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import { Link } from 'gatsby';
 import '../css/layout.styl';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 const Layout = ({ children }) => {
   const { github, twitter, linkedIn, mailto } = useSiteMetadata();
+  deckDeckGoHighlightElement();
 
   return (
     <div className="layout-container">

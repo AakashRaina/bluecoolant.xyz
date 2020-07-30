@@ -18,7 +18,10 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: `oceanic-next`
+            }
           },
         ],
       },
@@ -46,6 +49,9 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
           },
         ],
       },

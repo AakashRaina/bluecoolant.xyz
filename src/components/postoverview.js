@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/postoverview.styl';
+import '../css/overview.styl';
 import { Link } from 'gatsby';
 
 const PostOverview = ({ post }) => {
@@ -7,7 +7,7 @@ const PostOverview = ({ post }) => {
     frontmatter: { title, description, date, slug },
   } = post;
   return (
-    <div className="post-overview">
+    <div className="overview">
       <div className="title">
         <Link className="highlight-text" to={slug}>
           {title}

@@ -4,7 +4,8 @@ import Seo from '../components/seo';
 import usePosts from '../hooks/usePosts';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import PostOverview from '../components/postoverview';
-import projects from '../content/projects.json';
+import ProjectOverview from '../components/projectoverview';
+import projectsJSON from '../content/projects.json';
 import '../css/index.styl';
 
 const IndexPage = () => {
@@ -54,9 +55,13 @@ const IndexPage = () => {
         </span>
       </div>
       <div className="posts-list">
-        {posts.map((post, idx) => {
-          return <PostOverview post={post} key={idx} />;
-        })}
+        {activeTab === 'Posts'
+          ? posts.map((post, idx) => {
+              return <PostOverview post={post} key={idx} />;
+            })
+          : projectsJSON.projects.map((project, idx) => {
+              return <ProjectOverview project={project} key={idx} />;
+            })}
       </div>
     </Layout>
   );

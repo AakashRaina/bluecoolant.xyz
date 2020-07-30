@@ -1,0 +1,11 @@
+{
+  "title": "Personal Projects",
+  "projects": [
+    {
+      "projectName": "React Sling",
+      "projectUrl": "https://react-sling.netlify.app/",
+      "projectDescription": "Custom boilerplate for quickly bootstrapping react apps 🚀. An alternative to create-react-app.",
+      "date": "July, 2020"
+    }
+  ]
+}

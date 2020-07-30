@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import usePosts from '../hooks/usePosts';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import PostOverview from '../components/postoverview';
+import projects from '../content/projects.json';
 import '../css/index.styl';
 
 const IndexPage = () => {
+  const [activeTab, setActiveTab] = useState('Posts');
   const posts = usePosts();
   const { title, description } = useSiteMetadata();
+
+  const handleTabChange = e => setActiveTab(e.currentTarget.innerText);
 
   return (
     <Layout>
@@ -35,7 +39,20 @@ const IndexPage = () => {
           anything Web.
         </div>
       </div>
-      <div className="post-list-header">Posts</div>
+      <div className="post-list-header">
+        <span
+          className={`${activeTab === 'Posts' ? 'active' : ''}`}
+          onClick={handleTabChange}
+        >
+          Posts
+        </span>
+        <span
+          className={`${activeTab === 'Personal Projects' ? 'active' : ''}`}
+          onClick={handleTabChange}
+        >
+          Personal Projects
+        </span>
+      </div>
       <div className="posts-list">
         {posts.map((post, idx) => {
           return <PostOverview post={post} key={idx} />;

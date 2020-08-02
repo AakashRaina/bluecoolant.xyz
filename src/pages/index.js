@@ -27,17 +27,18 @@ const IndexPage = () => {
               href="https://razorpay.com/"
               target="_blank"
               rel="noreferrer"
-              className="highlight-text"
+              className="underline-highlight"
+              style={{ color: '#5f6c80' }}
             >
-              Razorpay[YC-2015]
+              Razorpay[YC-W15]
             </a>
           </p>
           , on the core payments team. I write mostly about{' '}
-          <p className="highlight-text">Javascript</p>,{' '}
-          <p className="highlight-text">React</p>,{' '}
-          <p className="highlight-text">Web performance</p> 🚀 and{' '}
-          <p className="highlight-text">Frontend</p> development in general.❤️
-          anything Web.
+          <p className="underline-highlight">Javascript</p>,{' '}
+          <p className="underline-highlight">React</p>,{' '}
+          <p className="underline-highlight">Web performance</p> 🚀 and{' '}
+          <p className="underline-highlight">Frontend</p> development in
+          general.❤️ anything Web.
         </div>
       </div>
       <div className="post-list-header">
@@ -57,11 +58,11 @@ const IndexPage = () => {
       <div className="posts-list">
         {activeTab === 'Posts'
           ? posts.map((post, idx) => {
-              return <PostOverview post={post} key={idx} />;
-            })
+            return <PostOverview post={post} key={idx} />;
+          })
           : projectsJSON.projects.map((project, idx) => {
-              return <ProjectOverview project={project} key={idx} />;
-            })}
+            return <ProjectOverview project={project} key={idx} />;
+          })}
       </div>
     </Layout>
   );

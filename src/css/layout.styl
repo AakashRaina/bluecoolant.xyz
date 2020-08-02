@@ -32,6 +32,18 @@ body
 .highlight-text
   color $primary-color
 
+.underline-highlight
+  position relative
+
+  &:after
+    position absolute
+    content ''
+    width 2em
+    border-bottom 4px solid $primary-color 
+    bottom 0
+    left 0
+    transform skew(-30deg, 0deg)
+
 @media (max-width : 500px)
   .layout-container 
     width 100%

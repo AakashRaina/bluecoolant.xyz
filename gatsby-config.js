@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Home | Bluecoolant`,
+    title: `Home | Aakash Raina`,
     description: `Aakash raina's blog`,
     author: `@AakashRaina`,
     twitter: `https://twitter.com/Bluecoolant`,

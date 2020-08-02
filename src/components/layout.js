@@ -1,13 +1,14 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { RiFileLine } from 'react-icons/ri';
 import useSiteMetadata from '../hooks/useSiteMetadata';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { Link } from 'gatsby';
 import '../css/layout.styl';
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 const Layout = ({ children }) => {
-  const { github, twitter, linkedIn, mailto } = useSiteMetadata();
+  const { github, twitter, linkedIn, mailto, resume } = useSiteMetadata();
   deckDeckGoHighlightElement();
 
   return (
@@ -37,6 +38,11 @@ const Layout = ({ children }) => {
           <span>
             <a href={mailto}>
               <FiMail color="#5f6c80" />
+            </a>
+          </span>
+          <span>
+            <a href={resume} target="_blank" rel="noreferrer">
+              <RiFileLine color="#5f6c80" />
             </a>
           </span>
         </div>

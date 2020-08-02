@@ -12,6 +12,7 @@ const useSiteMetadata = () => {
           github
           mailto
           linkedIn
+          resume
         }
       }
     }

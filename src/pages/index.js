@@ -48,10 +48,10 @@ const IndexPage = () => {
           Posts
         </span>
         <span
-          className={`${activeTab === 'Personal Projects' ? 'active' : ''}`}
+          className={`${activeTab === 'Side Projects' ? 'active' : ''}`}
           onClick={handleTabChange}
         >
-          Personal Projects
+          Side Projects
         </span>
       </div>
       <div className="posts-list">

@@ -13,7 +13,7 @@ const ProjectOverview = ({ project }) => {
             className="project-url"
             href={projectUrl}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             View here &rarr;
           </a>

@@ -50,16 +50,16 @@ const Layout = ({ children }) => {
                   </a>
                 </span>
               </div>
-              <label>
-                <input
-                  type="checkbox"
-                  onChange={e =>
-                    toggleTheme(e.target.checked ? 'dark' : 'light')
-                  }
-                  checked={theme === 'dark'}
-                />{' '}
-                Dark mode
-              </label>
+              <span
+                onClick={e =>
+                  toggleTheme(
+                    e.currentTarget.innerText === `☀️` ? 'light' : 'dark',
+                  )
+                }
+                className="theme-toggle"
+              >
+                {theme === `dark` ? `☀️` : `🌙`}
+              </span>
             </div>
             {children}
           </div>

@@ -11,6 +11,7 @@ const usePosts = () => {
             description
             date(formatString: "MMMM DD, YYYY")
           }
+          timeToRead
         }
       }
     }

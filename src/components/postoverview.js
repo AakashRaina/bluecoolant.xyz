@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 const PostOverview = ({ post }) => {
   const {
     frontmatter: { title, description, date, slug },
+    timeToRead,
   } = post;
   return (
     <div className="overview">
@@ -13,7 +14,13 @@ const PostOverview = ({ post }) => {
           {title}
         </Link>
       </div>
-      <div className="date">{date}</div>
+      <div className="date">
+        {date}
+        <span>
+          {', '}
+          {timeToRead} min read
+        </span>
+      </div>
       <div className="description">{description}</div>
     </div>
   );

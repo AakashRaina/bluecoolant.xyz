@@ -58,11 +58,11 @@ const IndexPage = () => {
       <div className="posts-list">
         {activeTab === 'Posts'
           ? posts.map((post, idx) => {
-            return <PostOverview post={post} key={idx} />;
-          })
+              return <PostOverview post={post} key={idx} />;
+            })
           : projectsJSON.projects.map((project, idx) => {
-            return <ProjectOverview project={project} key={idx} />;
-          })}
+              return <ProjectOverview project={project} key={idx} />;
+            })}
       </div>
     </Layout>
   );

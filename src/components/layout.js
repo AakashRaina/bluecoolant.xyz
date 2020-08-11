@@ -15,11 +15,18 @@ const Layout = ({ children }) => {
     <div className="layout-container">
       <div className="header">
         <div>
-          <Link to="/" className="highlight-text">
+          <Link
+            to="/"
+            className="highlight-text"
+            style={{ color: 'var(--primary-color)' }}
+          >
             Aakash
           </Link>
         </div>
-        <div className="social-links">
+        <div
+          className="social-links"
+          style={{ color: 'var(--secondary-color)' }}
+        >
           <span>
             <a href={twitter} target="_blank" rel="noreferrer">
               <FaTwitter color="#5f6c80" />

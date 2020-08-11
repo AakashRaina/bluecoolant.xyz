@@ -1,0 +1,15 @@
+/* global.css */
+
+body {
+  --bg: white;
+  --primary-color: #2ca2e9;
+  --secondary-color: #5f6c80;
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --bg: black;
+  --primary-color: #ffc107;
+  --secondary-color: white;
+}

@@ -1,7 +1,7 @@
 @import './theme.styl';
 
 body
-  background-color $primary-background
+  background-color var(--bg)
   animation fadein 2s
   font-family 'Noto Serif', serif
 
@@ -17,6 +17,7 @@ body
   padding-left 10px
   padding-top 15px
   border-bottom 2px #e1e1e1 solid
+  position relative
 
   div:first-child
     font-size $primary-font
@@ -25,12 +26,18 @@ body
   .social-links
     padding-top 35px
     padding-bottom 7px
+    color var(--secondary-color)
 
     span
      padding-right 13px
+  
+  .theme-toggle
+    position absolute
+    top 25px
+    right 10px
 
 .highlight-text
-  color $primary-color
+  color var(--primary-color)
 
 .underline-highlight
   position relative
@@ -39,7 +46,7 @@ body
     position absolute
     content ''
     width 2em
-    border-bottom 4px solid $primary-color 
+    border-bottom 4px solid var(--primary-color) 
     bottom 0
     left 0
     transform skew(-30deg, 0deg)

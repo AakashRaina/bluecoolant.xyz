@@ -20,7 +20,7 @@ const IndexPage = () => {
       <Seo title={title} description={description} />
       <div className="bio">
         <div className="highlight-text">Hi.</div>
-        <div className="about">
+        <div className="about" style={{ color: 'var(--secondary-color)' }}>
           I'm Aakash Raina - currently working as UI Engineer @{' '}
           <p>
             <a
@@ -28,7 +28,7 @@ const IndexPage = () => {
               target="_blank"
               rel="noreferrer"
               className="underline-highlight"
-              style={{ color: '#5f6c80' }}
+              style={{ color: 'var(--primary-color)' }}
             >
               Razorpay[YC-W15]
             </a>

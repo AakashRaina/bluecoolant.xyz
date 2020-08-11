@@ -5,6 +5,7 @@ import { RiFileLine } from 'react-icons/ri';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { Link } from 'gatsby';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import '../css/layout.styl';
 
 const Layout = ({ children }) => {
@@ -12,43 +13,59 @@ const Layout = ({ children }) => {
   deckDeckGoHighlightElement();
 
   return (
-    <div className="layout-container">
-      <div className="header">
-        <div>
-          <Link to="/" className="highlight-text">
-            Aakash
-          </Link>
-        </div>
-        <div className="social-links">
-          <span>
-            <a href={twitter} target="_blank" rel="noreferrer">
-              <FaTwitter color="#5f6c80" />
-            </a>
-          </span>
-          <span>
-            <a href={linkedIn} target="_blank" rel="noreferrer">
-              <FaLinkedin color="#5f6c80" />
-            </a>
-          </span>
-          <span>
-            <a href={github} target="_blank" rel="noreferrer">
-              <FaGithub color="#5f6c80" />
-            </a>
-          </span>
-          <span>
-            <a href={mailto}>
-              <FiMail color="#5f6c80" />
-            </a>
-          </span>
-          <span>
-            <a href={resume} target="_blank" rel="noreferrer">
-              <RiFileLine color="#5f6c80" />
-            </a>
-          </span>
-        </div>
-      </div>
-      {children}
-    </div>
+    <ThemeToggler>
+      {({ theme, toggleTheme }) => {
+        return (
+          <div className="layout-container">
+            <div className="header">
+              <div>
+                <Link to="/" className="highlight-text">
+                  Aakash
+                </Link>
+              </div>
+              <div className="social-links">
+                <span>
+                  <a href={twitter} target="_blank" rel="noreferrer">
+                    <FaTwitter color="var(--secondary-color)" />
+                  </a>
+                </span>
+                <span>
+                  <a href={linkedIn} target="_blank" rel="noreferrer">
+                    <FaLinkedin color="var(--secondary-color)" />
+                  </a>
+                </span>
+                <span>
+                  <a href={github} target="_blank" rel="noreferrer">
+                    <FaGithub color="var(--secondary-color)" />
+                  </a>
+                </span>
+                <span>
+                  <a href={mailto}>
+                    <FiMail color="var(--secondary-color)" />
+                  </a>
+                </span>
+                <span>
+                  <a href={resume} target="_blank" rel="noreferrer">
+                    <RiFileLine color="var(--secondary-color)" />
+                  </a>
+                </span>
+              </div>
+              <span
+                onClick={e =>
+                  toggleTheme(
+                    e.currentTarget.innerText === `☀️` ? 'light' : 'dark',
+                  )
+                }
+                className="theme-toggle"
+              >
+                {theme === `dark` ? `☀️` : `🌙`}
+              </span>
+            </div>
+            {children}
+          </div>
+        );
+      }}
+    </ThemeToggler>
   );
 };
 

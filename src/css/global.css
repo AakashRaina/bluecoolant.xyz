@@ -9,7 +9,7 @@ body {
 
 body.dark {
   -webkit-font-smoothing: antialiased;
-  --bg: darkslategray;
-  --primary-color: limegreen;
+  --bg: black;
+  --primary-color: #ffc107;
   --secondary-color: white;
 }

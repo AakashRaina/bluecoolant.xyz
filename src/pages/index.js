@@ -19,12 +19,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title={title} description={description} />
       <div className="bio">
-        <div
-          className="highlight-text"
-          style={{ color: 'var(--primary-color)' }}
-        >
-          Hi.
-        </div>
+        <div className="highlight-text">Hi.</div>
         <div className="about" style={{ color: 'var(--secondary-color)' }}>
           I'm Aakash Raina - currently working as UI Engineer @{' '}
           <p>
@@ -33,40 +28,17 @@ const IndexPage = () => {
               target="_blank"
               rel="noreferrer"
               className="underline-highlight"
-              style={{ color: '#5f6c80' }}
+              style={{ color: 'var(--primary-color)' }}
             >
               Razorpay[YC-W15]
             </a>
           </p>
           , on the core payments team. I write mostly about{' '}
-          <p
-            className="underline-highlight"
-            style={{ color: 'var(--primary-color)' }}
-          >
-            Javascript
-          </p>
-          ,{' '}
-          <p
-            className="underline-highlight"
-            style={{ color: 'var(--primary-color)' }}
-          >
-            React
-          </p>
-          ,{' '}
-          <p
-            className="underline-highlight"
-            style={{ color: 'var(--primary-color)' }}
-          >
-            Web performance
-          </p>{' '}
-          🚀 and{' '}
-          <p
-            className="underline-highlight"
-            style={{ color: 'var(--primary-color)' }}
-          >
-            Frontend
-          </p>{' '}
-          development in general.❤️ anything Web.
+          <p className="underline-highlight">Javascript</p>,{' '}
+          <p className="underline-highlight">React</p>,{' '}
+          <p className="underline-highlight">Web performance</p> 🚀 and{' '}
+          <p className="underline-highlight">Frontend</p> development in
+          general.❤️ anything Web.
         </div>
       </div>
       <div className="post-list-header">

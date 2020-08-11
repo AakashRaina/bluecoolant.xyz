@@ -10,24 +10,18 @@ const PostOverview = ({ post }) => {
   return (
     <div className="overview">
       <div className="title">
-        <Link
-          className="highlight-text"
-          to={slug}
-          style={{ color: 'var(--primary-color)' }}
-        >
+        <Link className="highlight-text" to={slug}>
           {title}
         </Link>
       </div>
-      <div className="date" style={{ color: 'var(--secondary-color)' }}>
+      <div className="date">
         {date}
         <span>
           {', '}
           {timeToRead} min read
         </span>
       </div>
-      <div className="description" style={{ color: 'var(--secondary-color)' }}>
-        {description}
-      </div>
+      <div className="description">{description}</div>
     </div>
   );
 };

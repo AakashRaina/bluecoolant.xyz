@@ -50,6 +50,11 @@ const Layout = ({ children }) => {
                   </a>
                 </span>
               </div>
+              <span class="blog-section">
+                <Link to="/blog" className="highlight-text">
+                  Blog
+                </Link>
+              </span>
               <span
                 onClick={e =>
                   toggleTheme(

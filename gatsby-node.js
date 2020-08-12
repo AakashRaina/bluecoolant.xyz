@@ -21,7 +21,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     // context is passed as a parameter to graphql query by gatsby under the hood
     // and is available in the component/template 💫
     actions.createPage({
-      path: post.frontmatter.slug,
+      path: `blog/${post.frontmatter.slug}`,
       component: require.resolve('./src/templates/post.js'),
       context: {
         slug: post.frontmatter.slug,

@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import usePosts from '../hooks/usePosts';
 import useSiteMetadata from '../hooks/useSiteMetadata';
-import PostOverview from '../components/postoverview';
 import ProjectOverview from '../components/projectoverview';
 import projectsJSON from '../content/projects.json';
 import '../css/index.styl';
 
 const IndexPage = () => {
-  const [activeTab, setActiveTab] = useState('Posts');
-  const posts = usePosts();
+  const [activeTab, setActiveTab] = useState('Skills');
   const { title, description } = useSiteMetadata();
 
   const handleTabChange = e => setActiveTab(e.currentTarget.innerText);
@@ -43,10 +40,10 @@ const IndexPage = () => {
       </div>
       <div className="post-list-header">
         <span
-          className={`${activeTab === 'Posts' ? 'active' : ''}`}
+          className={`${activeTab === 'Skills' ? 'active' : ''}`}
           onClick={handleTabChange}
         >
-          Posts
+          Skills
         </span>
         <span
           className={`${activeTab === 'Side Projects' ? 'active' : ''}`}
@@ -56,13 +53,11 @@ const IndexPage = () => {
         </span>
       </div>
       <div className="posts-list">
-        {activeTab === 'Posts'
-          ? posts.map((post, idx) => {
-              return <PostOverview post={post} key={idx} />;
-            })
+        {activeTab === 'Skills'
+          ? null
           : projectsJSON.projects.map((project, idx) => {
-              return <ProjectOverview project={project} key={idx} />;
-            })}
+            return <ProjectOverview project={project} key={idx} />;
+          })}
       </div>
     </Layout>
   );

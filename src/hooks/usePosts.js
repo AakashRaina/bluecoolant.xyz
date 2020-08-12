@@ -9,7 +9,7 @@ const usePosts = () => {
             slug
             title
             description
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD YYYY")
           }
           timeToRead
         }

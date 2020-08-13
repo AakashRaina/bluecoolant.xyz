@@ -2,12 +2,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const usePosts = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    query MyQuery {
+      allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
         nodes {
           frontmatter {
-            slug
             title
+            slug
             description
             date(formatString: "MMMM DD YYYY")
           }
@@ -17,7 +17,7 @@ const usePosts = () => {
     }
   `);
 
-  return data.allMdx.nodes;
+  return data.allMarkdownRemark.nodes;
 };
 
 export default usePosts;

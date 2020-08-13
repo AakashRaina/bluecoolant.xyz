@@ -3,17 +3,21 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-// export const imageQuery = graphql`
-//   query MyQuery {
-//     file(relativePath: { eq: "404.png" }) {
-//       childImageSharp {
-//         fluid {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
+export const imageQuery = graphql`
+  query {
+    file(relativePath: { eq: "404.png" }) {
+      childImageSharp {
+        fluid {
+          base64
+          aspectRatio
+          src
+          srcSet
+          sizes
+        }
+      }
+    }
+  }
+`;
 
 const PageNotFound = ({ data }) => {
   return (

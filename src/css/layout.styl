@@ -26,6 +26,7 @@ body
   .blog-section
     position absolute
     font-size $secondary-font
+    font-weight bold
     top 90px
     right 5px
     cursor pointer
@@ -46,18 +47,6 @@ body
 
 .highlight-text
   color var(--primary-color)
-
-.underline-highlight
-  position relative
-
-  &:after
-    position absolute
-    content ''
-    width 2em
-    border-bottom 4px solid var(--primary-color) 
-    bottom 0
-    left 0
-    transform skew(-30deg, 0deg)
 
 @media (max-width : 500px)
   .layout-container 

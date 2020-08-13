@@ -24,18 +24,18 @@ const IndexPage = () => {
               href="https://razorpay.com/"
               target="_blank"
               rel="noreferrer"
-              className="underline-highlight"
+              className="highlight-text"
               style={{ color: 'var(--primary-color)' }}
             >
               Razorpay[YC-W15]
             </a>
           </p>
           , on the core payments team. I write mostly about{' '}
-          <p className="underline-highlight">Javascript</p>,{' '}
-          <p className="underline-highlight">React</p>,{' '}
-          <p className="underline-highlight">Web performance</p> 🚀 and{' '}
-          <p className="underline-highlight">Frontend</p> development in
-          general.❤️ anything Web.
+          <p className="highlight-text">Javascript</p>,{' '}
+          <p className="highlight-text">React</p>,{' '}
+          <p className="highlight-text">Web performance</p> 🚀 and{' '}
+          <p className="highlight-text">Frontend</p> development in general.❤️
+          everything Web.
         </div>
       </div>
       <div className="post-list-header">

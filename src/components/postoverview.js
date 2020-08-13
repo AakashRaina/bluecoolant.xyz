@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/overview.styl';
 import { Link } from 'gatsby';
+import '../css/postoverview.styl';
 
 const PostOverview = ({ post }) => {
   const {
@@ -8,20 +8,19 @@ const PostOverview = ({ post }) => {
     timeToRead,
   } = post;
   return (
-    <div className="overview">
+    <div className="post-overview">
       <div className="title">
         <Link className="highlight-text" to={slug}>
           {title}
         </Link>
       </div>
-      <div className="date">
+      <div className="meta">
         {date}
         <span>
           {', '}
           {timeToRead} min read
         </span>
       </div>
-      <div className="description">{description}</div>
     </div>
   );
 };

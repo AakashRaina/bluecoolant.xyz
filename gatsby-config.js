@@ -42,26 +42,10 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-mdx`,
-    //   options: {
-    //     defaultLayouts: {
-    //       default: require.resolve('./src/components/layout.js'),
-    //     },
-    //     gatsbyRemarkPlugins: [
-    //       {
-    //         resolve: `gatsby-remark-images`,
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-highlight-code`,
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Bluecoolant | Aakash Raina's Blog`,
+        name: `Aakash Raina's Blog`,
         short_name: `Bluecoolant`,
         start_url: `/`,
         background_color: `#2ca2e9`,

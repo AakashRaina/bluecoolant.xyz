@@ -4,6 +4,7 @@ import Seo from '../components/seo';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import ProjectOverview from '../components/projectoverview';
 import projectsJSON from '../content/projects.json';
+import { AiFillHeart } from 'react-icons/ai';
 import '../css/index.styl';
 
 const IndexPage = () => {
@@ -34,8 +35,11 @@ const IndexPage = () => {
           <p className="highlight-text">Javascript</p>,{' '}
           <p className="highlight-text">React</p>,{' '}
           <p className="highlight-text">Web performance</p> 🚀 and{' '}
-          <p className="highlight-text">Frontend</p> development in general.❤️
-          everything Web.
+          <p className="highlight-text">Frontend</p> development in general.
+          <p class="heart">
+            <AiFillHeart color="red" />
+          </p>
+          everything web.
         </div>
       </div>
       <div className="post-list-header">
@@ -56,8 +60,8 @@ const IndexPage = () => {
         {activeTab === 'Skills'
           ? null
           : projectsJSON.projects.map((project, idx) => {
-            return <ProjectOverview project={project} key={idx} />;
-          })}
+              return <ProjectOverview project={project} key={idx} />;
+            })}
       </div>
     </Layout>
   );

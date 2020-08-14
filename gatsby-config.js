@@ -23,8 +23,11 @@ module.exports = {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               theme: `material`,
-              lineNumbers: true
+              lineNumbers: true,
             },
+          },
+          {
+            resolve: `gatsby-remark-images`,
           },
         ],
       },

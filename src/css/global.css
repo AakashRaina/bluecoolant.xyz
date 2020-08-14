@@ -5,6 +5,7 @@ body {
   --primary-color: #2ca2e9;
   --secondary-color: #5f6c80;
   --textNormal: #5f6c80;
+  --code-bg:#a4ddff;
 }
 
 body.dark {
@@ -13,4 +14,5 @@ body.dark {
   --primary-color: pink;
   --secondary-color: white;
   --textNormal: rgba(255, 255, 255, 0.88);
+  --code-bg:pink;
 }

@@ -6,6 +6,7 @@ body {
   --secondary-color: #5f6c80;
   --textNormal: #5f6c80;
   --code-bg:#a4ddff;
+  --textLink: #2ca2e9;
 }
 
 body.dark {
@@ -15,4 +16,5 @@ body.dark {
   --secondary-color: white;
   --textNormal: rgba(255, 255, 255, 0.88);
   --code-bg:pink;
+  --textLink:pink;
 }

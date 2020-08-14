@@ -16,3 +16,20 @@ date: 2020-08-13
 * **Learning About Mutation**: Folks new to JavaScript often get confused thinking `const` implies immutability. However, one could argue that it's important to learn the difference between variable mutation and assignment anyway, and preferring `const` forces you to confront this distinction early on.
 * **Meaningless Assignments**: Sometimes, an assignment doesn't make sense at all. For example, with React Hooks, the values you get from a Hook like `useState` are more like parameters. They flow in one direction. Seeing an error on their assignment helps you learn earlier about the React data flow.
 * **Performance Benefits**: There are occasional claims that JavaScript engines could make code using `const` run faster due to the knowledge the variable won't be reassigned.
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+```jsx 
+// sample react code ✅
+import React from "react";
+
+function Component(props){
+  return <div>Hello World</div>
+}
+```

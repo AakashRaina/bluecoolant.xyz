@@ -22,7 +22,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              theme: `oceanic-next`,
+              theme: `material`,
+              lineNumbers: true
             },
           },
         ],

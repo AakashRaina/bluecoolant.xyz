@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import Skills from '../components/skills';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import ProjectOverview from '../components/projectoverview';
 import projectsJSON from '../content/projects.json';
@@ -36,7 +37,7 @@ const IndexPage = () => {
           <p className="highlight-text">React</p>,{' '}
           <p className="highlight-text">Web performance</p> 🚀 and{' '}
           <p className="highlight-text">Frontend</p> development in general.
-          <p class="heart">
+          <p className="heart">
             <AiFillHeart color="red" />
           </p>
           everything web.
@@ -56,12 +57,14 @@ const IndexPage = () => {
           Side Projects
         </span>
       </div>
-      <div className="posts-list">
-        {activeTab === 'Skills'
-          ? null
-          : projectsJSON.projects.map((project, idx) => {
-              return <ProjectOverview project={project} key={idx} />;
-            })}
+      <div>
+        {activeTab === 'Skills' ? (
+          <Skills />
+        ) : (
+          projectsJSON.projects.map((project, idx) => {
+            return <ProjectOverview project={project} key={idx} />;
+          })
+        )}
       </div>
     </Layout>
   );

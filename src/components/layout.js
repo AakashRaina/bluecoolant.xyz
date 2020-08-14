@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
                   </a>
                 </span>
               </div>
-              <span class="blog-section">
+              <span className="blog-section">
                 <Link to="/blog" className="highlight-text">
                   Blog
                 </Link>
@@ -58,12 +58,12 @@ const Layout = ({ children }) => {
               <span
                 onClick={e =>
                   toggleTheme(
-                    e.currentTarget.innerText === `☀️` ? 'light' : 'dark',
+                    e.currentTarget.innerText === `💡` ? 'light' : 'dark',
                   )
                 }
                 className="theme-toggle"
               >
-                {theme === `dark` ? `☀️` : `🌙`}
+                {theme === `dark` ? `💡` : `🌙`}
               </span>
             </div>
             {children}

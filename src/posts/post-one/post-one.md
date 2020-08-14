@@ -17,6 +17,8 @@ date: 2020-08-13
 * **Meaningless Assignments**: Sometimes, an assignment doesn't make sense at all. For example, with React Hooks, the values you get from a Hook like `useState` are more like parameters. They flow in one direction. Seeing an error on their assignment helps you learn earlier about the React data flow.
 * **Performance Benefits**: There are occasional claims that JavaScript engines could make code using `const` run faster due to the knowledge the variable won't be reassigned.
 
+>**`let` vs `const` vs `var`**: This is a blockquote `let`.
+
 ```json
 {
   "firstName": "John",

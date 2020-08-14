@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { graphql } from 'gatsby';
+import '../css/blogpage.styl';
 
 // slug passed in context is available here as a query parameter
 // used to query data for that page
@@ -27,10 +28,16 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
       <Seo title={title} description={description} />
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <main>
+        <article>
+          <header></header>
+          <div
+            class="blog-page-content"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <footer></footer>
+        </article>
+      </main>
     </Layout>
   );
 };

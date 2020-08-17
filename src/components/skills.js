@@ -7,7 +7,7 @@ const data = {
   'Libraries/Tools': [
     'Reactjs',
     'Redux',
-    'Redux Thunk',
+    'Redux-Thunk',
     'Webpack',
     'Storybookjs',
     'Tailwind',
@@ -21,16 +21,24 @@ const Skills = _ => {
 
   return (
     <div className="skills">
-      <select onChange={handleChange}>
-        <option>Languages</option>
-        <option>Frameworks/Runtimes</option>
-        <option>Libraries/Tools</option>
-      </select>
-      <ul>
-        {data[domain].map((item, idx) => {
-          return <li key={idx}>{item}</li>;
-        })}
-      </ul>
+      <div>
+        <select onChange={handleChange}>
+          <option>Languages</option>
+          <option>Frameworks/Runtimes</option>
+          <option>Libraries/Tools</option>
+        </select>
+      </div>
+      <div>
+        <span>
+          {data[domain].map((item, idx) => {
+            return (
+              <p class="skill-item" key={idx}>
+                {item}
+              </p>
+            );
+          })}
+        </span>
+      </div>
     </div>
   );
 };

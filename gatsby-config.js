@@ -7,7 +7,7 @@ module.exports = {
     github: `https://github.com/AakashRaina`,
     linkedIn: `https://www.linkedin.com/in/aakashraina/`,
     mailto: `mailto:aakashraina9@gmail.com`,
-    resume: `https://www.dropbox.com/s/ye2gcw886hiwjiw/Aakash%20Raina.pdf?dl=0`,
+    resume: `https://www.dropbox.com/s/whepn69qrzojrh5/Aakash%20Raina.pdf?dl=0`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

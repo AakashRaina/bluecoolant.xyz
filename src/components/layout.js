@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             <div className="header">
               <div>
                 <Link to="/" className="highlight-text">
-                  Aakash
+                  <p>Aakash</p>
                 </Link>
               </div>
               <div className="social-links">

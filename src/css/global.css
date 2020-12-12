@@ -5,16 +5,18 @@ body {
   --primary-color: #2ca2e9;
   --secondary-color: #5f6c80;
   --textNormal: #5f6c80;
-  --code-bg:#a4ddff;
+  --code-bg: #a4ddff;
   --textLink: #2ca2e9;
+  --text-gradient: -webkit-linear-gradient(-70deg, #3bf0e4, #bca1f7);
 }
 
 body.dark {
   -webkit-font-smoothing: antialiased;
-  --bg: #282c35;
-  --primary-color: pink;
+  --bg: #040d21;
+  --primary-color: orange;
   --secondary-color: white;
   --textNormal: rgba(255, 255, 255, 0.88);
-  --code-bg:pink;
-  --textLink:pink;
+  --code-bg: orange;
+  --textLink: orange;
+  --text-gradient: -webkit-linear-gradient(-70deg, #ff7170, #ffe57f);
 }

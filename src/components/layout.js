@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
           <div className="layout-container">
             <div className="header">
               <div>
-                <Link to="/" className="highlight-text">
+                <Link to="/" className="highlight-text animate-text-underline">
                   <p>Aakash</p>
                 </Link>
               </div>

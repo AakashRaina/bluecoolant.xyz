@@ -8,3 +8,17 @@ $secondary-font = 1.35rem
     opacity 0
   to 
     opacity 1
+
+.animate-text-underline
+  &::after
+    content ""
+    position absolute
+    height 2px
+    width 0%
+    background-color var(--primary-color)
+    left 0
+    bottom 0
+    transition 300ms
+      
+  &:hover::after
+    width 100%

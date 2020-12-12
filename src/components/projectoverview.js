@@ -7,15 +7,9 @@ const ProjectOverview = ({ project }) => {
   return (
     <div className="overview">
       <div className="title">
-        <span className="highlight-text">
-          {projectName}{' '}
-          <a
-            className="project-url"
-            href={projectUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            View here &rarr;
+        <span className="highlight-text animate-text-underline">
+          <a href={projectUrl} target="_blank" rel="noreferrer">
+            {projectName}{' '}
           </a>
         </span>
       </div>

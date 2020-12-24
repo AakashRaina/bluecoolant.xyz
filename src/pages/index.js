@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import Skills from '../components/skills';
+import Profile from '../components/Profile';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import ProjectOverview from '../components/projectoverview';
 import projectsJSON from '../content/projects.json';
@@ -9,7 +9,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import '../css/index.styl';
 
 const IndexPage = () => {
-  const [activeTab, setActiveTab] = useState('Skills');
+  const [activeTab, setActiveTab] = useState('Profile');
   const { title, description } = useSiteMetadata();
 
   const handleTabChange = e => setActiveTab(e.currentTarget.innerText);
@@ -48,7 +48,7 @@ const IndexPage = () => {
           className={`${activeTab === 'Skills' ? 'active' : ''}`}
           onClick={handleTabChange}
         >
-          Skills
+          Profile
         </span>
         <span
           className={`${activeTab === 'Side Projects' ? 'active' : ''}`}
@@ -58,8 +58,8 @@ const IndexPage = () => {
         </span>
       </div>
       <div>
-        {activeTab === 'Skills' ? (
-          <Skills />
+        {activeTab === 'Profile' ? (
+          <Profile />
         ) : (
           projectsJSON.projects.map((project, idx) => {
             return <ProjectOverview project={project} key={idx} />;

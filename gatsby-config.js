@@ -62,7 +62,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-segment-js`,
       options: {
-        prodKey: `${SEGMENT_PRODUCTION_WRITE_KEY}`,
+        prodKey:
+          process.env.NODE_ENV === `production`
+            ? `${process.env.SEGMENT_PRODUCTION_WRITE_KEY}`
+            : ``,
         trackPage: true,
       },
     },

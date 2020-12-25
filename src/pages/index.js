@@ -9,7 +9,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import '../css/index.styl';
 
 const IndexPage = () => {
-  const [activeTab, setActiveTab] = useState('Profile');
+  const [activeTab, setActiveTab] = useState('Profiles');
   const { title, description } = useSiteMetadata();
 
   const handleTabChange = e => setActiveTab(e.currentTarget.innerText);
@@ -45,10 +45,10 @@ const IndexPage = () => {
       </div>
       <div className="post-list-header">
         <span
-          className={`${activeTab === 'Skills' ? 'active' : ''}`}
+          className={`${activeTab === 'Profiles' ? 'active' : ''}`}
           onClick={handleTabChange}
         >
-          Profile
+          Profiles
         </span>
         <span
           className={`${activeTab === 'Side Projects' ? 'active' : ''}`}
@@ -58,7 +58,7 @@ const IndexPage = () => {
         </span>
       </div>
       <div>
-        {activeTab === 'Profile' ? (
+        {activeTab === 'Profiles' ? (
           <Profile />
         ) : (
           projectsJSON.projects.map((project, idx) => {

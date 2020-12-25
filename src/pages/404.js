@@ -24,7 +24,7 @@ const PageNotFound = ({ data }) => {
   return (
     <Layout>
       <div className="page-not-found">
-        <Img alt="" fluid={data.file.childImageSharp.fluid} />
+        <Img fluid={data.file.childImageSharp.fluid} />
       </div>
       <div className="page-not-found-content">
         <span>

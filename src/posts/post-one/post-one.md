@@ -1,14 +1,8 @@
 ---
-title: Hello World 😎 👋
-slug: hello-world
-description: Finally here comes hello world
-date: 2020-08-13
+title: Web security for frontend devs😎 👋
+slug: web-security-frontend
+description: A look at web security from the frontend perspective
+date: 2020-12-31
 ---
 
-```jsx
-import React from 'react';
-
-function Component(props) {
-  return <div>Blog starting soon 🤞🏻</div>;
-}
-```
+Coming soon

@@ -59,5 +59,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-segment-js`,
+      options: {
+        prodKey: `${SEGMENT_PRODUCTION_WRITE_KEY}`,
+        trackPage: true,
+      },
+    },
   ],
 };

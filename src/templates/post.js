@@ -24,18 +24,20 @@ export const query = graphql`
 // queries returned response is directly available inside the component as props 🎩
 const PostTemplate = ({ data: { markdownRemark: post } }) => {
   const { title, description } = post.frontmatter;
-
+  console.log(post);
   return (
-    <Layout>
+    <Layout isBlogPage={true}>
       <Seo title={title} description={description} />
       <main>
         <article>
-          <header>{title}</header>
+          <header className="blog-header">{title}</header>
           <div
-            class="blog-page-content"
+            className="blog-page-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <footer></footer>
+          <footer className="blog-page-footer">
+            Copyright &#xa9; Aakash Raina, 2020
+          </footer>
         </article>
       </main>
     </Layout>

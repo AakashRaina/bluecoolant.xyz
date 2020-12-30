@@ -9,7 +9,7 @@ const BlogPage = () => {
   const posts = usePosts();
   const { title, description } = useSiteMetadata();
   return (
-    <Layout>
+    <Layout isBlogPage={false}>
       <Seo title={title} description={description} />
       {posts.map((post, idx) => {
         return <PostOverview post={post} key={idx} />;

@@ -15,7 +15,7 @@ const IndexPage = () => {
   const handleTabChange = e => setActiveTab(e.currentTarget.innerText);
 
   return (
-    <Layout>
+    <Layout isBlogPage={false}>
       <Seo title={title} description={description} />
       <div className="bio">
         <div className="highlight-text">Hi.</div>

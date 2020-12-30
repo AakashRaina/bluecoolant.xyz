@@ -33,9 +33,8 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
         <article>
           <header className="blog-header">{title}</header>
           <div className="blog-meta">
-            <span>{tags[0]}</span>
-            {'***'}
-            <span>{post.timeToRead} mins</span>
+            <span className="tag">{tags[0]}</span>{' '}
+            <span className="time-to-read">{post.timeToRead} mins read</span>
           </div>
           <div
             className="blog-page-content"

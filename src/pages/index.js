@@ -20,7 +20,7 @@ const IndexPage = () => {
       <div className="bio">
         <div className="highlight-text">Hi.</div>
         <div className="about" style={{ color: 'var(--secondary-color)' }}>
-          I'm Aakash Raina - currently working as Frontend Engineer @{' '}
+          I'm Aakash Raina - currently working as Frontend engineer @{' '}
           <p>
             <a
               href="https://razorpay.com/"

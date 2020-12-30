@@ -41,7 +41,7 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
           <footer className="blog-page-footer">
-            Copyright &#xa9; Aakash Raina, 2020
+            Copyright &#xa9; Aakash Raina, {new Date().getFullYear()}
           </footer>
         </article>
       </main>

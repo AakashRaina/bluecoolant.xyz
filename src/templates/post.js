@@ -30,7 +30,7 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
       <Seo title={title} description={description} />
       <main>
         <article>
-          <header></header>
+          <header>{title}</header>
           <div
             class="blog-page-content"
             dangerouslySetInnerHTML={{ __html: post.html }}

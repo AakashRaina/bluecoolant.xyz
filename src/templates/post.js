@@ -14,23 +14,29 @@ export const query = graphql`
         slug
         description
         date
+        tags
       }
       html
-      rawMarkdownBody
+      timeToRead
     }
   }
 `;
 
 // queries returned response is directly available inside the component as props 🎩
 const PostTemplate = ({ data: { markdownRemark: post } }) => {
-  const { title, description } = post.frontmatter;
-  console.log(post);
+  const { title, description, tags } = post.frontmatter;
+
   return (
     <Layout isBlogPage={true}>
       <Seo title={title} description={description} />
       <main>
         <article>
           <header className="blog-header">{title}</header>
+          <div className="blog-meta">
+            <span>{tags[0]}</span>
+            {'***'}
+            <span>{post.timeToRead} mins</span>
+          </div>
           <div
             className="blog-page-content"
             dangerouslySetInnerHTML={{ __html: post.html }}

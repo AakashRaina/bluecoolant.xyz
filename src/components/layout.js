@@ -12,6 +12,25 @@ const Layout = ({ children, isBlogPage }) => {
       {({ theme, toggleTheme }) => {
         return (
           <div className="layout-container">
+            {isBlogPage && (
+              <div className="header" style={{ borderBottom: 'none' }}>
+                <div>
+                  <Link to="/blog" className="highlight-text">
+                    <p>☜</p>
+                  </Link>
+                </div>
+                <span
+                  onClick={e =>
+                    toggleTheme(
+                      e.currentTarget.innerText === `💡` ? 'light' : 'dark',
+                    )
+                  }
+                  className="theme-toggle"
+                >
+                  {theme === `dark` ? `💡` : `🌙`}
+                </span>
+              </div>
+            )}
             {isBlogPage === false && (
               <div className="header">
                 <div>

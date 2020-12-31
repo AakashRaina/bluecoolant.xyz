@@ -40,9 +40,7 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
             className="blog-page-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <footer className="blog-page-footer">
-            Copyright &#xa9; Aakash Raina, {new Date().getFullYear()}
-          </footer>
+          <footer className="blog-page-footer">&#xa9; Aakash Raina</footer>
         </article>
       </main>
     </Layout>

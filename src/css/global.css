@@ -12,7 +12,7 @@ body {
 
 body.dark {
   -webkit-font-smoothing: antialiased;
-  --bg: #040d21;
+  --bg: #171717;
   --primary-color: orange;
   --secondary-color: white;
   --textNormal: rgba(255, 255, 255, 0.88);

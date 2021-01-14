@@ -15,7 +15,7 @@ const PostOverview = ({ post }) => {
         </Link>
       </div>
       <div className="meta">
-        {date}
+        posted on <strong>{date}</strong>
         <span>
           {', '}
           {timeToRead} min read

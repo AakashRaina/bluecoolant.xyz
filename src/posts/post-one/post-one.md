@@ -2,7 +2,7 @@
 title: Web security for frontend devs 🔐 🚔
 slug: web-security-frontend
 description: A look at web security from the frontend perspective
-date: 2021-01-01
+date: 2021-01-15
 tags: ['#security']
 ---
 
@@ -12,10 +12,9 @@ As frontend engineers we tend to focus more and are more concerned about how we 
 
 This is one of the most common attacks and you must have heard about it many times. In this attack, the attacker injects code in your application in a place where normal input is expected and that injected code gets executed which can compromise your application in most likliness. As frontend devs, be careful about the following areas to easily get around this attack:
 
-- User generated content which includes input fields, textareas. Make sure you sanitise user input before you use it anywhere in your application. Usually UI frameworks/libraries do it for you.
+- User generated content which includes input fields, textareas. Make sure you sanitise user input before you use it anywhere in your application. Usually UI frameworks/libraries do it for you. For eg. If you use `dangerouslySetInnerHTML` in React you are introducing XSS into your application by directly rendering markup without sanitization. Avoid using such implementations.
 - Anywhere user-input is reflected back eg. _Couldn't find user \${username}._ If this is rendered in markup directly, _username_ could be replaced by a script tag which will get executed.
 - Query params rendered directly in markup. You get the point right? 👀
-- element.InnerHTML ❌
 - Image upload in your application. Images contain EXIF tags from which meta data is extracted and if you are rendering meta data in HTML markup then there can be security concerns because EXIF tags can be constructed with malicious HTML markup and if there is no sanitisation performed then you are in for a wild ride ☠️
 
 So how do we protect against XSS attack? One simple approach is to sanitise user inputs but `Content security policy` is your strongest weapon. Content-security-policy is an HTTP response header that your server can set. This tells the browser to execute code from _allowed domains only_. **You can set multiple directives for script tags, images, fonts, css etc.** This will tell the browser to load resources in accordance with mentioned directives in the header. The browser will simply not allow anything that violates the content security policy. You can read more about CSP [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
@@ -43,7 +42,8 @@ The next attack is kind of a UI redress attack called **Clickjacking**. The atta
 
 Next up are 3rd party libraries. We use multiple 3rd party libraries or pieces of code in our application code pulling them directly from CDN's and NPM all the time. When you pull a 3rd party dependency into your application your are putting in a lot of trust into your dependencies. Are you 100% sure you are not pulling any malicious piece of code as well? Are you sure the CDN doesn't tamper with the deloyed assets? Worry not. You can use the following methods that'll help you place more trust and confidence in your dependencies:
 
-- Always use libraries that have LTS(long term support) and audit your dependencies regularly. [Dependabot](https://dependabot.com/) to the rescue 🥷🏻
+- Always use libraries that have LTS(long term support) and audit your dependencies. You can run npm audits for doing audits regularly. [Dependabot](https://dependabot.com/) to the rescue 🏃🏻‍♂️. Another option available here is to use code scanning feature provided by Github. You can use code scanning to find, triage, and prioritize fixes for existing problems in your code. The only caveat here is that it comes at a cost.
+- You can also use `National Vulnerability Database`, which is collection of known vulnerabilities and this will give you more detailed insights into vulnerabilties you want to know about. For eg. here's a <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-8203" target="_blank" rel="noopener noreferrer">vulnerability</a> in lodash.
 - Check for bug bounty programmes and open issues for libraries you end up using. Check how actively library maintainers/collaboraters are solving security issues pertaining to the library. See if there are ways people can report security issues for the same library. The project should have an active ecosystem to ensure highly secure code gets shipped.
 - When versions are incremented make sure there are tests which assert that only requests which are needed are sent out from your app. If you detect a suspicious network request which shouldn't have been there then you can be sure something is wrong 🕵🏻
 - `Subresource Integrity (SRI)` enables browsers to verify that resources they fetch are delivered without any manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match. Integrity attribute is used here by specifying a base64-encoded cryptographic hash of a resource you’re telling the browser to fetch and the browser will first compare the script to the expected hash, and verify that there's a match otherwise return a network error indicating that fetching of the resource failed.

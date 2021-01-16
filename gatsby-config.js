@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Aakash Raina's Blog`,
-        short_name: `Bluecoolant`,
+        short_name: `AakashRaina`,
         start_url: `/`,
         background_color: `#2ca2e9`,
         theme_color: `#2ca2e9`,

@@ -39,6 +39,7 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
           <div
             className="blog-page-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
+            lang="en"
           />
           <footer className="blog-page-footer">&#xa9; Aakash Raina</footer>
         </article>

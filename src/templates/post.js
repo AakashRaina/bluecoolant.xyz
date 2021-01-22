@@ -25,7 +25,15 @@ export const query = graphql`
 
 // queries returned response is directly available inside the component as props 🎩
 const PostTemplate = ({ data: { markdownRemark: post } }) => {
+  const [showShare, setShowShare] = React.useState(false);
+
   const { title, description, tags } = post.frontmatter;
+
+  // When it's hydarated on client side, I want to show share
+  // button but for only supported browsers on mobile
+  React.useEffect(() => {
+    if (navigator && navigator.share) setShowShare(true);
+  }, []);
 
   const onShareClick = () => {
     navigator
@@ -55,7 +63,7 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
             lang="en"
           />
           <div className="share">
-            {navigator.share && (
+            {showShare && (
               <span onClick={onShareClick}>
                 <FiShare />
               </span>

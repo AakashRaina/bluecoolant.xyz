@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { graphql } from 'gatsby';
+import { FiShare } from 'react-icons/fi';
 import '../css/blogpage.styl';
 
 // slug passed in context is available here as a query parameter
@@ -26,6 +27,18 @@ export const query = graphql`
 const PostTemplate = ({ data: { markdownRemark: post } }) => {
   const { title, description, tags } = post.frontmatter;
 
+  const onShareClick = () => {
+    navigator
+      .share({
+        title: `${title}`,
+        url: `${window.location.href}`,
+      })
+      .then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+  };
+
   return (
     <Layout isBlogPage={true}>
       <Seo title={title} description={description} />
@@ -41,6 +54,13 @@ const PostTemplate = ({ data: { markdownRemark: post } }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             lang="en"
           />
+          <div className="share">
+            {navigator.share && (
+              <span onClick={onShareClick}>
+                <FiShare />
+              </span>
+            )}
+          </div>
           <footer className="blog-page-footer">&#xa9; Aakash Raina</footer>
         </article>
       </main>

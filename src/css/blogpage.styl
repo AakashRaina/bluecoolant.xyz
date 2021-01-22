@@ -18,6 +18,13 @@
   li
     line-height 1.8
     margin-bottom 17px
+    padding-left 10px
+
+    &:nth-child(2n)::marker
+      content '🏆'
+    
+    &:nth-child(2n+1)::marker
+      content '🎯'
 
   a
     text-decoration underline
@@ -68,3 +75,23 @@
   margin 50px auto
   text-align center
   font-family 'Noto Serif', serif
+
+.share
+  display flex
+  justify-content center
+
+  span
+    display none
+    background-color var(--primary-color)
+    height 50px
+    width 50px
+    border-radius 25px
+    color var(--share-color)
+    font-size 19px
+    position relative
+    box-shadow var(--share-box-shadow)
+
+    svg 
+      position absolute
+      top 15px
+      left 15px

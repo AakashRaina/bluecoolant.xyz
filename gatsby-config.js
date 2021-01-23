@@ -11,21 +11,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-stylus`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-highlight-code`,
-            options: {
-              theme: `material`,
-              lineNumbers: true,
-            },
-          },
           {
             resolve: `gatsby-remark-images`,
           },

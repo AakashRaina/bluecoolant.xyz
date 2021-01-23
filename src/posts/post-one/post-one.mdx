@@ -27,7 +27,7 @@ The next attack is kind of a UI redress attack called **Clickjacking**. The atta
 - Set **content security policy's 😎 frame-ancestors directive.** This specifies valid ancestors for your web page using frame, iframe, object or embed.
 - Check if your web page is loaded in an iframe but how? This code-snippet will help you out. This technique is called framekiller/framebusters.
 
-  ```jsx
+  ```javascript
   <style>html{display:none;}</style>
   <script>
      if (self == top) {

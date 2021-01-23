@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import CodeBlock from '../components/CodeBlock';
 import { graphql } from 'gatsby';
 import { FiShare } from 'react-icons/fi';
 import { MDXProvider } from '@mdx-js/react';
@@ -26,6 +27,10 @@ export const query = graphql`
     }
   }
 `;
+
+const components = {
+  pre: CodeBlock,
+};
 
 // queries returned response is directly available inside the component as props 🎩
 const PostTemplate = ({
@@ -66,7 +71,7 @@ const PostTemplate = ({
             <span className="time-to-read">{nodes[0].timeToRead} min read</span>
           </div>
           <div className="blog-page-content" lang="en">
-            <MDXProvider>
+            <MDXProvider components={components}>
               <MDXRenderer>{nodes[0].body}</MDXRenderer>
             </MDXProvider>
           </div>

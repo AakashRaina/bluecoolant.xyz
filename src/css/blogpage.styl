@@ -1,13 +1,14 @@
 .blog-page-content
   color var(--textNormal)
   font-size 18px
-  font-family 'Noto Serif', serif
+  font-family 'PT Serif', serif
   padding 0px 15px
   hyphens auto
   word-break normal
 
   pre
     overflow scroll
+    box-shadow rgba(0, 0, 0, 0.2) 0px 30px 60px -10px, rgba(0, 0, 0, 0.22) 0px 18px 36px -18px
 
   p
     line-height 1.8
@@ -23,11 +24,8 @@
     margin-bottom 17px
     padding-left 10px
 
-    &:nth-child(2n)::marker
-      content '🏆'
-    
-    &:nth-child(2n+1)::marker
-      content '🎯'
+    &:nth-child(n)::marker
+      content '➤'
 
   a
     text-decoration underline
@@ -56,12 +54,12 @@
   margin 60px 0px 40px 0px
   font-size 38px
   color var(--textNormal)
-  font-family 'Noto Serif', serif
+  font-family 'PT Serif', serif
   text-align center
 
 .blog-meta
   text-align center
-  font-family 'Noto Serif', serif
+  font-family 'PT Serif', serif
   margin-bottom 30px
 
   .tag
@@ -77,7 +75,7 @@
   color var(--textNormal)
   margin 50px auto
   text-align center
-  font-family 'Noto Serif', serif
+  font-family 'PT Serif', serif
 
 .share
   display flex

@@ -1,10 +1,10 @@
 {
   "projects": [
     {
-      "projectName": "React Sling",
-      "projectUrl": "https://react-sling.netlify.app/",
-      "projectDescription": "Custom boilerplate for quickly bootstrapping react apps 🚀. An alternative to create-react-app.",
-      "date": "July, 2020"
+      "projectName": "React Spawn",
+      "projectUrl": "https://react-spawn.netlify.app/",
+      "projectDescription": "CLI tool to quickly spawn a minimalist template for SPA react web apps 🚀 [WIP]",
+      "date": "Feb, 2021"
     },
     {
       "projectName": "Loffy",

@@ -6,8 +6,8 @@ module.exports = {
     twitter: `https://twitter.com/Bluecoolant`,
     github: `https://github.com/AakashRaina`,
     linkedIn: `https://www.linkedin.com/in/aakashraina/`,
-    mailto: `mailto:aakash.raina@yandex.com`,
-    resume: `https://www.dropbox.com/s/whepn69qrzojrh5/Aakash%20Raina.pdf?dl=0`,
+    mailto: `mailto:aakashraina9@gmail.com`,
+    resume: `https://www.dropbox.com/s/qe93dipic3ckksf/Aakash_Raina_Resume.pdf?dl=0`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
